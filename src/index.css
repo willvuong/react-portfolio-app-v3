@@ -1,0 +1,550 @@
+* {
+  margin: auto;
+}
+
+body {
+  font-family: Montserrat, BlinkMacSystemFont, 'Segoe UI';
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media only screen and (max-width:1008px) {
+  body {
+    width: 100%;
+  }
+}
+
+@keyframes translateYContent {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes translateXContent {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleInContent {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 768px = tablet width */
+/* transform: scale(1.03); enlarge element*/
+
+
+/* 'About Me', 'My Skillset', and 'My Projects' headers */
+.headerContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+.headerContainer h3 {
+  color: #0db3c7;
+}
+
+/******************************* HEADER *******************************/
+.Header {
+  font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1; /* overlap all content */
+  box-shadow: 0px 0px 50px 2px #ddd;
+  /* box-shadow: 0px 0px 50px 2px rgb(250, 250, 250); */
+}
+
+.navbar {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.myLogo {
+  width: 130px;
+}
+
+.Navigation {
+  flex: 1; /* lets all the flexible items be the same length, regardless of its content */
+  text-align: right; /* navlinks go to right of header */
+}
+
+#navLinks li { /* remember to apply to 'li' specifically to affect the items within the ul #navLinks -> #navLinks li */
+  list-style-type: none; /* gets rid of bullet points on an <ul> */
+  display: inline-block; /* display links horizontally instead of verically */
+  padding: 1rem;
+}
+
+#navLinks li a { /* <Link /> in Navigation.js comes out as a tag within the dom (refer to in dev tools on chrome) */
+  text-decoration: none; /* removes underlined links */
+  color: black;
+  opacity: 1;
+}
+
+#navLinks li a:hover {
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
+}
+
+.navActive {
+  border-bottom: 1.5px black solid;
+}
+
+/******************* hamburger menu *******************/
+.MenuButton { 
+  display: none;
+}
+
+.NavigationResponsive {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  animation: translateYContent 0.5s;
+  position: absolute;
+  background: white;
+  z-index: 1;
+}
+
+#navLinksResponsive {
+  top: 20%;
+  position: relative;
+}
+
+#navLinksResponsive li {
+  list-style-type: none;
+  padding: 1rem;
+  font-size: 4rem;
+}
+
+#navLinksResponsive li a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.6;  
+}
+
+#navLinksResponsive li a:hover {
+  opacity: 1;
+  transition: 0.3s ease-in-out;  
+}
+
+@media only screen and (max-width:1008px) { 
+  .MenuButton {
+    display:block;
+  }
+
+  #navLinks li {
+    display:none;
+  }
+
+  .NavigationResponsive {
+    display: block;
+  }
+}
+
+/******************* hamburger menu *******************/
+
+/******************************* HEADER *******************************/
+
+
+/******************************* HOME *******************************/
+.Home {
+  font-size: 1.4rem;
+  margin-top: 135px;
+}
+
+.bioContainer {
+  background: #fbb03b;
+  padding: 10rem 0;
+}
+
+.innerBioContainer {
+  animation: translateYContent 1s;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.bio {
+  width: 50%;
+}
+
+#webDevImg {
+  width: 50%;
+  height: 475px;
+}
+
+.aboutMeContainer {
+  width: 60%;
+  margin: 0 auto;
+  padding: 10rem 0;
+  
+}
+
+.innerAboutMeContainer {
+  display: flex;
+}
+
+.aboutMe {
+  margin-top: 5rem;
+  animation: translateYContent 2s;
+  width: 100%;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#portfolioImg {
+  height: 275px;
+  width: 25%;
+  border-radius: 30%;
+  margin: 1rem;
+  box-shadow: 0 0 20px #ddd;
+} 
+
+@media only screen and (max-width:1600px) { 
+  .innerAboutMeContainer {
+    display: block;
+    text-align: center;
+  } 
+
+  .aboutMe {
+    margin: 0;
+  }
+
+  #portfolioImg {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width:1300px) { 
+  #portfolioImg {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .innerBioContainer {
+    display: block;
+    text-align: center;
+  }
+
+  #webDevImg {
+    width: 100%;
+    margin-top: 1rem;
+  }  
+  
+  #portfolioImg {
+    width: 40%;
+  }
+
+}
+@media only screen and (max-width:750px) {
+  #portfolioImg {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  #portfolioImg {
+    width: 60%;
+  }
+}
+
+/******************************* HOME *******************************/
+
+
+
+/******************************* ABOUT *******************************/
+.About {
+  font-size: 1.4rem;
+  background-color: rgb(250, 250, 250);
+  padding: 10rem 0;
+}
+
+.aboutContainer {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* .About h2 {
+  font-size: 2rem;
+  animation: translateXContent 1s;
+} */
+
+.AboutItem {
+  margin: 1rem;
+  padding-bottom: 2rem;
+  animation: translateYContent 0.5s linear;
+  animation-fill-mode: backwards;
+}
+
+/* .AboutItem:hover {
+  transform: scale(1.02);
+  transition: 0.2s ease-in-out;
+} */
+
+.AboutItem h3 {
+  display: inline-block;
+}
+
+.AboutItem i {
+  padding-right: 1rem;
+  color: black;
+}
+
+.AboutItem:nth-child(3) { animation-delay: .3s }
+.AboutItem:nth-child(4) { animation-delay: .6s }
+.AboutItem:nth-child(5) { animation-delay: .9s }
+.AboutItem:nth-child(6) { animation-delay: 1.2s }
+.AboutItem:nth-child(7) { animation-delay: 1.5s } 
+
+.resume {
+  text-align: center;
+  /* padding: 2rem; */
+  animation: scaleInContent 1s;
+  animation-delay: 1.6s;
+  animation-fill-mode: backwards;
+}
+
+.resume a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.7;
+  font-size: 2.2rem;
+}
+
+.resume a:hover {
+  opacity: 1;
+  transition: 1s;
+}
+
+.resume:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
+/******************************* ABOUT *******************************/
+
+/******************************* PROJECTS *******************************/
+.Projects {
+  padding: 10rem 0;
+}
+
+.projectsContainer {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* .Projects h2{
+  font-size: 2rem;
+  padding-left: 2.5%;
+  animation: translateXContent 1s;
+} */
+
+.ProjectsItem {
+  animation: translateYContent 0.5s linear;
+  animation-fill-mode: backwards;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  width: 50%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.ProjectsItem h3 {
+  font-size: 1.4rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.ProjectsItem:nth-child(3) { animation-delay: .3s }
+.ProjectsItem:nth-child(4) { animation-delay: .6s }
+.ProjectsItem:nth-child(5) { animation-delay: .9s }
+.ProjectsItem:nth-child(6) { animation-delay: 1.2s }
+.ProjectsItem:nth-child(7) { animation-delay: 1.5s } 
+
+.innerProjectsContainer {
+  height: 500px;
+  position: relative;
+}  
+
+.innerProjectsContainer img{
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+} 
+
+.projectInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  display: none;
+}
+
+.projectInfo a {
+  text-decoration: none;
+}
+
+.projectLinks {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.projectLinks a {
+  margin-left: 1rem;
+}
+
+.projectLinks a, .projectLinks i {
+  color: white; 
+}
+
+.projectLinks a:hover {
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
+}
+
+.innerProjectsContainer:hover > .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    border-radius: 15px;
+    background-color:black;
+    opacity:0.7;
+    transition: 0.5s ease-out;
+}
+
+.innerProjectsContainer:hover .projectInfo {
+  display: block;
+}
+
+@media only screen and (max-width:1400px) {
+  .ProjectsItem {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .innerProjectsContainer {
+    height: 350px;
+    font-size: 0.75rem;
+  }
+
+}
+/******************************* PROJECTS *******************************/
+
+/******************************* FOOTER *******************************/
+.Footer {
+  border-top: 1px solid lightgray;
+  text-align: center;
+  padding: 2rem 0;
+  position: absolute;
+  left: 0;
+  color: white;
+  width: 100%;
+  background-color: black;
+}
+
+#contactLinks {
+  list-style-type: none; /* gets rid of bullet points on an <ul> */
+  padding: 0; /* list have padding by default */ 
+}
+
+#contactLinks li{
+  display: inline-block;
+  padding: 7px;
+}
+
+.Footer i, .Footer p {
+  color: white;
+  opacity: 0.6;
+} 
+
+.contactIcons .fab:hover, .contactIcons .fas:hover {
+  opacity: 1;
+  /* transform: scale(1.1);  */ /* expands the elements 1.1 its size */
+  transition: 0.2s ease-in-out; /* smothens the transition a bit; animation duration = 0.2s */
+  /* font-size: 2.2em; this makes all div elements movie in accordance to the one expanding  */
+}
+
+.MenuButton .fab:hover, .MenuButton .fas:hover {
+  opacity: 1;
+  /* transform: scale(1.1);  */ /* expands the elements 1.1 its size */
+  transition: 0.2s ease-in-out; /* smothens the transition a bit; animation duration = 0.2s */
+}
+
+#copyright {
+  padding: 0.5rem;
+  font-size: 12px;
+}
+/******************************* FOOTER *******************************/
+
+
+/******************************* phone resonspiveness *******************************/
+
+@media only screen and (max-width:700px) {
+  
+  .navbar {
+    width: 90%;
+  }
+  .innerBioContainer {
+    width: 90%;
+  }
+  .aboutMeContainer {
+    width: 90%;
+  }
+  .aboutContainer {
+    width: 90%;
+  }
+  .projectsContainer {
+    width: 90%;
+  }
+
+
+  .bioContainer {
+    padding: 4rem 0;
+  }
+  .Projects {
+    padding: 4rem 0;
+  }
+  .About {
+    padding: 4rem 0;
+  }
+  .aboutMeContainer {
+    padding: 4rem 0;
+  }
+}
