@@ -69,53 +69,64 @@ html {
 }
 
 /******************************* HEADER *******************************/
-.Header {
+header {
   font-size: 1.2rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: white;
-  z-index: 1; /* overlap all content */
+  background-color: black;
+  z-index: 1;
   box-shadow: 0px 0px 50px 2px #ddd;
-  /* box-shadow: 0px 0px 50px 2px rgb(250, 250, 250); */
+  opacity: 0.8;
 }
 
-.navbar {
+.header-container {
   width: 60%;
   display: flex;
   align-items: center;
   margin: auto;
 }
 
-.myLogo {
-  width: 130px;
+#my-logo {
+  width: 90px;
 }
 
-.Navigation {
+nav {
   flex: 1; /* lets all the flexible items be the same length, regardless of its content */
   text-align: right; /* navlinks go to right of header */
 }
 
-#navLinks li { /* remember to apply to 'li' specifically to affect the items within the ul #navLinks -> #navLinks li */
-  list-style-type: none; /* gets rid of bullet points on an <ul> */
-  display: inline-block; /* display links horizontally instead of verically */
+#navigation-links li { 
+  list-style-type: none;
+  display: inline-flex;
   padding: 1rem;
 }
 
-#navLinks li a { /* <Link /> in Navigation.js comes out as a tag within the dom (refer to in dev tools on chrome) */
+#navigation-links li a { /* <Link /> in Navigation.js comes out as a tag within the dom (refer to in dev tools on chrome) */
   text-decoration: none; /* removes underlined links */
-  color: black;
+  color: white;
   opacity: 1;
 }
 
-#navLinks li a:hover {
+#navigation-links li a:hover {
   opacity: 0.6;
   transition: 0.3s ease-in-out;
 }
 
 .navActive {
   border-bottom: 1.5px black solid;
+}
+
+.MenuButton {
+  color: white;
+  padding: 1rem;
+}
+
+.MenuButton .fab:hover, .MenuButton .fas:hover {
+  opacity: 1;
+  /* transform: scale(1.1);  */ /* expands the elements 1.1 its size */
+  transition: 0.2s ease-in-out; /* smothens the transition a bit; animation duration = 0.2s */
 }
 
 /******************* hamburger menu *******************/
@@ -159,10 +170,10 @@ html {
 
 @media only screen and (max-width:1008px) { 
   .MenuButton {
-    display:block;
+    display: block;
   }
 
-  #navLinks li {
+  #navigation-links li {
     display:none;
   }
 
@@ -501,11 +512,7 @@ html {
   /* font-size: 2.2em; this makes all div elements movie in accordance to the one expanding  */
 }
 
-.MenuButton .fab:hover, .MenuButton .fas:hover {
-  opacity: 1;
-  /* transform: scale(1.1);  */ /* expands the elements 1.1 its size */
-  transition: 0.2s ease-in-out; /* smothens the transition a bit; animation duration = 0.2s */
-}
+
 
 #copyright {
   padding: 0.5rem;
@@ -518,7 +525,7 @@ html {
 
 @media only screen and (max-width:700px) {
   
-  .navbar {
+  .header-container {
     width: 90%;
   }
   .innerBioContainer {

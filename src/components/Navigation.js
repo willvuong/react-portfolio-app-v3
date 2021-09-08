@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 const Navigation = () => {
     return (
         <nav className="Navigation">
-            <ul id="navLinks">
+            <ul id="navigation-links">
                 <li>
                     <a href="#about">About</a>
                 </li>
