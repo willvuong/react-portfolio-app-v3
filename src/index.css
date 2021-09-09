@@ -57,14 +57,14 @@ html {
 /* transform: scale(1.03); enlarge element*/
 
 
-/* 'About Me', 'My Skillset', and 'My Projects' headers */
-.headerContainer {
+/* 'About Me', 'My Skillset', and 'My Projects' headings */
+.section-heading {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 1.4rem;
 }
 
-.headerContainer h3 {
+.section-heading h3 {
   color: #0db3c7;
 }
 
@@ -185,9 +185,6 @@ nav {
   }
 }
 
-/******************* hamburger menu *******************/
-
-/******************************* HEADER *******************************/
 
 
 /******************************* HOME *******************************/
@@ -197,7 +194,7 @@ nav {
   overflow: hidden;
 }
 
-.bio-container {
+.home-container {
   background: black;
   height: 100vh;
   width: 100vw;
@@ -214,7 +211,11 @@ nav {
   text-align: center;
 }
 
-video {
+.bio p {
+  opacity: 0.8;
+}
+
+#home-video {
   left: 0;
   margin: auto;
   opacity: 0.6;
@@ -223,149 +224,124 @@ video {
   object-fit: cover;
 }
 
-/* .innerBioContainer {
-  animation: translateYContent 1s;
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-  margin: 0 auto;
-} */
 
-/* .bio {
-  width: 50%;
-} */
-
-.aboutMeContainer {
-  width: 60%;
-  margin: 0 auto;
-  padding: 10rem 0;
-  
+/******************************* ABOUT *******************************/
+.About {
+  font-size: 1.3rem;
+  background-color: rgb(250, 250, 250);
+  padding: 5rem 0;
 }
 
-.innerAboutMeContainer {
+/* about me */
+.about-me {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 3rem;
   display: flex;
 }
 
-.aboutMe {
-  margin-top: 5rem;
+.about-me-description {
   animation: translateYContent 2s;
   width: 100%;
   margin: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-#portfolioImg {
-  height: 275px;
-  width: 25%;
-  border-radius: 30%;
+#portfolio-img {
+  height: 200px;
+  width: 15%;
+  border-radius: 50%;
   margin: 1rem;
   box-shadow: 0 0 20px #ddd;
 } 
 
 @media only screen and (max-width:1600px) { 
-  .innerAboutMeContainer {
+  .about-me {
     display: block;
     text-align: center;
   } 
 
-  .aboutMe {
+  .about-me-description {
     margin: 0;
   }
 
-  #portfolioImg {
+  #portfolio-img {
     width: 25%;
   }
 }
 
 @media only screen and (max-width:1300px) { 
-  #portfolioImg {
+  #portfolio-img {
     width: 30%;
   }
 }
 
 @media only screen and (max-width:900px) {
-  .innerBioContainer {
-    display: block;
-    text-align: center;
-  }
-
   #webDevImg {
     width: 100%;
     margin-top: 1rem;
   }  
   
-  #portfolioImg {
+  #portfolio-img {
     width: 40%;
   }
 
 }
 @media only screen and (max-width:750px) {
-  #portfolioImg {
+  #portfolio-img {
     width: 50%;
   }
 }
 
 @media only screen and (max-width:600px) {
-  #portfolioImg {
+  #portfolio-img {
     width: 60%;
   }
 }
 
-/******************************* HOME *******************************/
+/* skills */
 
-
-
-/******************************* ABOUT *******************************/
-.About {
-  font-size: 1.4rem;
-  background-color: rgb(250, 250, 250);
-  padding: 10rem 0;
-}
-
-.aboutContainer {
-  width: 60%;
+.skills {
+  width: 80%;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/* .About h2 {
-  font-size: 2rem;
-  animation: translateXContent 1s;
-} */
-
-.AboutItem {
-  margin: 1rem;
-  padding-bottom: 2rem;
+.SkillsItem {
+  text-align: center;
+  height: 150px;
+  width: 150px;
   animation: translateYContent 0.5s linear;
   animation-fill-mode: backwards;
 }
 
-/* .AboutItem:hover {
+/* .SkillsItem:hover {
   transform: scale(1.02);
   transition: 0.2s ease-in-out;
 } */
 
-.AboutItem h3 {
-  display: inline-block;
+.SkillsItem p {
+  font-size: 0.9rem;
 }
 
-.AboutItem i {
-  padding-right: 1rem;
+.SkillsItem i {
   color: black;
 }
 
-.AboutItem:nth-child(3) { animation-delay: .3s }
-.AboutItem:nth-child(4) { animation-delay: .6s }
-.AboutItem:nth-child(5) { animation-delay: .9s }
-.AboutItem:nth-child(6) { animation-delay: 1.2s }
-.AboutItem:nth-child(7) { animation-delay: 1.5s } 
+.SkillsItem:nth-child(3) { animation-delay: .3s }
+.SkillsItem:nth-child(4) { animation-delay: .6s }
+.SkillsItem:nth-child(5) { animation-delay: .9s }
+.SkillsItem:nth-child(6) { animation-delay: 1.2s }
+.SkillsItem:nth-child(7) { animation-delay: 1.5s } 
+.SkillsItem:nth-child(8) { animation-delay: 1.8s }
+.SkillsItem:nth-child(9) { animation-delay: 2.1s }
+.SkillsItem:nth-child(10) { animation-delay: 2.4s }
 
 .resume {
   text-align: center;
   /* padding: 2rem; */
   animation: scaleInContent 1s;
-  animation-delay: 1.6s;
+  animation-delay: 2.7s;
   animation-fill-mode: backwards;
 }
 
@@ -389,7 +365,7 @@ video {
 
 /******************************* PROJECTS *******************************/
 .Projects {
-  padding: 10rem 0;
+  padding: 5rem 0;
 }
 
 .projectsContainer {
@@ -548,13 +524,10 @@ video {
   /* .header-container {
     width: 90%;
   } */
-  .innerBioContainer {
+  .about-me {
     width: 90%;
   }
-  .aboutMeContainer {
-    width: 90%;
-  }
-  .aboutContainer {
+  .skills {
     width: 90%;
   }
   .projectsContainer {
@@ -562,7 +535,7 @@ video {
   }
 
 
-  /* .bio-container {
+  /* .bio {
     padding: 4rem 0;
   } */
   .Projects {

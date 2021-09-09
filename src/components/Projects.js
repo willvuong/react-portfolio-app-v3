@@ -4,7 +4,7 @@ const Projects = ({ projectsData }) => {
     return (
         <div className="Projects" id="projects">
             <div className="projectsContainer">
-                <div className="headerContainer">
+                <div className="section-heading">
                     <h3>My Projects</h3>
                     <h2>Some Of My Latest Work.</h2>
                 </div>
