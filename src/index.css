@@ -149,7 +149,7 @@ nav {
 #navigation-links-responsive {
   position: absolute;
   padding: 0;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
@@ -163,12 +163,17 @@ nav {
 #navigation-links-responsive li a {
   text-decoration: none;
   color: white;
-  opacity: 0.9;  
+  opacity: 0.9;
+  font-size: 2rem;  
 }
 
 #navigation-links-responsive li a:hover {
   opacity: 1;
   transition: 0.3s ease-in-out;  
+}
+
+#resume a:hover {
+  color: rgb(89, 167, 255);
 }
 
 @media only screen and (max-width:1008px) { 
@@ -337,30 +342,6 @@ nav {
 .SkillsItem:nth-child(9) { animation-delay: 2.1s }
 .SkillsItem:nth-child(10) { animation-delay: 2.4s }
 
-.resume {
-  text-align: center;
-  /* padding: 2rem; */
-  animation: scaleInContent 1s;
-  animation-delay: 2.7s;
-  animation-fill-mode: backwards;
-}
-
-.resume a {
-  text-decoration: none;
-  color: black;
-  opacity: 0.7;
-  font-size: 2.2rem;
-}
-
-.resume a:hover {
-  opacity: 1;
-  transition: 1s;
-}
-
-.resume:hover {
-  transform: scale(1.05);
-  transition: 0.2s ease-in-out;
-}
 /******************************* ABOUT *******************************/
 
 /******************************* PROJECTS *******************************/

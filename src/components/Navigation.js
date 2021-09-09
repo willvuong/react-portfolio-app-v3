@@ -13,6 +13,9 @@ const Navigation = () => {
                 <li>
                     <a href="#contact">Contact</a>
                 </li>
+                <li id="resume">
+                    <a href="WilliamVuong_Resume.pdf" download><i className="far fa-file"></i> Resume</a>
+                </li>
             </ul>
         </nav>
     )
