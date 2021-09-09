@@ -11,7 +11,7 @@ const NavigationResponsive = ( {setShowMenu} ) => {
 
     return (
         <nav className="NavigationResponsive">
-            <ul id="navLinksResponsive">
+            <ul id="navigation-links-responsive">
                 <li><a href='#about' onClick={closeNavigationResponsive && setShowMenuChange}>About</a></li>
                 <li><a href='#projects' onClick={closeNavigationResponsive && setShowMenuChange}>Projects</a></li>
                 <li><a href='#contact' onClick={closeNavigationResponsive && setShowMenuChange}>Contact</a></li>
