@@ -2,17 +2,17 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <div className="Home">
+        <section className="Home">
             <title>William Vuong</title>
 
-            <div className="bioContainer">
-                <div className="innerBioContainer">
-                    <div className="bio">
-                        <h2>HELLO, I'M WILLIAM.</h2>
-                        <p>Web Programmer based in the Greater Toronto Area.</p>
-                    </div>
-                    <img id="webDevImg" src="webdev.png" alt="webdev" />
+            <div className="bio-container">
+                <div className="bio">
+                    <h2>HELLO, I'M WILLIAM.</h2>
+                    <p>Web Programmer based in the Greater Toronto Area.</p>
                 </div>
+                <video autoPlay loop muted >
+                    <source src="light.mp4" type="video/mp4" />
+                </video>
             </div>
 
             <div className="aboutMeContainer" id="about">
@@ -42,7 +42,7 @@ const Home = () => {
 
             </div>
 
-        </div>
+        </section>
     )
 }
 
