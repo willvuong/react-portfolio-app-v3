@@ -253,53 +253,28 @@ nav {
 
 #portfolio-img {
   height: 200px;
-  width: 15%;
+  max-width: 15%;
   border-radius: 50%;
   margin: 1rem;
   box-shadow: 0 0 20px #ddd;
 } 
 
-@media only screen and (max-width:1600px) { 
+
+
+@media only screen and (max-width:1200px) { 
+  #portfolio-img {
+    max-width: 25%;
+  }
+}
+
+@media only screen and (max-width:992px) { 
   .about-me {
-    display: block;
-    text-align: center;
-  } 
-
-  .about-me-description {
-    margin: 0;
+    flex-direction: column;
+    align-items: center;
   }
 
   #portfolio-img {
-    width: 25%;
-  }
-}
-
-@media only screen and (max-width:1300px) { 
-  #portfolio-img {
-    width: 30%;
-  }
-}
-
-@media only screen and (max-width:900px) {
-  #webDevImg {
-    width: 100%;
-    margin-top: 1rem;
-  }  
-  
-  #portfolio-img {
-    width: 40%;
-  }
-
-}
-@media only screen and (max-width:750px) {
-  #portfolio-img {
-    width: 50%;
-  }
-}
-
-@media only screen and (max-width:600px) {
-  #portfolio-img {
-    width: 60%;
+    max-width: 35%;
   }
 }
 
@@ -309,7 +284,6 @@ nav {
   width: 80%;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
 }
 
 .SkillsItem {
@@ -319,11 +293,6 @@ nav {
   animation: translateYContent 0.5s linear;
   animation-fill-mode: backwards;
 }
-
-/* .SkillsItem:hover {
-  transform: scale(1.02);
-  transition: 0.2s ease-in-out;
-} */
 
 .SkillsItem p {
   font-size: 0.9rem;
@@ -341,6 +310,16 @@ nav {
 .SkillsItem:nth-child(8) { animation-delay: 1.8s }
 .SkillsItem:nth-child(9) { animation-delay: 2.1s }
 .SkillsItem:nth-child(10) { animation-delay: 2.4s }
+
+@media only screen and (max-width:1200px) {
+  .skills {
+    flex-wrap: wrap;
+  }
+  
+  .SkillsItem {
+    flex: 0 0 20%;
+  }
+}
 
 /******************************* ABOUT *******************************/
 
