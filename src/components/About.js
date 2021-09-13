@@ -2,12 +2,12 @@ import SkillsItem from './SkillsItem.js'
 
 const About = ({ skillsData }) => {
     return (
-        <section className="About">
+        <section className="About" id="about">
             <div className="section-heading">
                 <h3>About Me</h3>
                 <h2>Who I Am.</h2>
             </div>
-            <section className="about-me" id="about">
+            <section className="about-me">
                 <img id="portfolio-img" src="portfolioImg.jpg" alt="portfolio-img" />
                 <div className="about-me-description">
                     <p>
