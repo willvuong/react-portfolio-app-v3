@@ -53,11 +53,6 @@ html {
   }
 }
 
-/* 768px = tablet width */
-/* transform: scale(1.03); enlarge element*/
-
-
-/* 'About Me', 'My Skillset', and 'My Projects' headings */
 .section-heading {
   text-align: center;
   margin-bottom: 2rem;
@@ -77,12 +72,9 @@ header {
   right: 0;
   background-color: black;
   z-index: 2;
-  /* box-shadow: 0px 0px 50px 2px #ddd; */
-  /* opacity: 0.8; */
 }
 
 .header-container {
-  /* width: 60%; */
   display: flex;
   align-items: center;
   margin: auto;
@@ -94,8 +86,8 @@ header {
 }
 
 nav {
-  flex: 1; /* lets all the flexible items be the same length, regardless of its content */
-  text-align: right; /* navlinks go to right of header */
+  flex: 1;
+  text-align: right;
 }
 
 #navigation-links li { 
@@ -104,15 +96,15 @@ nav {
   padding: 1rem;
 }
 
-#navigation-links li a { /* <Link /> in Navigation.js comes out as a tag within the dom (refer to in dev tools on chrome) */
-  text-decoration: none; /* removes underlined links */
+#navigation-links li a { 
+  text-decoration: none; 
   color: white;
-  opacity: 1;
+  opacity: 0.7;
 }
 
 #navigation-links li a:hover {
-  opacity: 0.6;
-  transition: 0.3s ease-in-out;
+  opacity: 1;
+  transition: 0.2s ease-in-out;
 }
 
 .navActive {
@@ -121,13 +113,13 @@ nav {
 
 .MenuButton {
   color: white;
+  opacity: 0.7;
   padding-right: 1rem;
 }
 
 .MenuButton .fab:hover, .MenuButton .fas:hover {
   opacity: 1;
-  /* transform: scale(1.1);  */ /* expands the elements 1.1 its size */
-  transition: 0.2s ease-in-out; /* smothens the transition a bit; animation duration = 0.2s */
+  transition: 0.2s ease-in-out;
 }
 
 /******************* hamburger menu *******************/
@@ -149,7 +141,7 @@ nav {
 #navigation-links-responsive {
   position: absolute;
   padding: 0;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
@@ -447,8 +439,8 @@ nav {
 }
 
 #contactLinks {
-  list-style-type: none; /* gets rid of bullet points on an <ul> */
-  padding: 0; /* list have padding by default */ 
+  list-style-type: none;
+  padding: 0;
 }
 
 #contactLinks li{
@@ -463,9 +455,7 @@ nav {
 
 .contactIcons .fab:hover, .contactIcons .fas:hover {
   opacity: 1;
-  /* transform: scale(1.1);  */ /* expands the elements 1.1 its size */
-  transition: 0.2s ease-in-out; /* smothens the transition a bit; animation duration = 0.2s */
-  /* font-size: 2.2em; this makes all div elements movie in accordance to the one expanding  */
+  transition: 0.2s ease-in-out;
 }
 
 
