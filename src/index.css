@@ -427,7 +427,7 @@ nav {
 /******************************* PROJECTS *******************************/
 
 /******************************* FOOTER *******************************/
-.Footer {
+footer {
   border-top: 1px solid lightgray;
   text-align: center;
   padding: 1rem 0;
@@ -448,7 +448,7 @@ nav {
   padding: 7px;
 }
 
-.Footer i, .Footer p {
+footer i, footer p {
   color: white;
   opacity: 0.6;
 } 
